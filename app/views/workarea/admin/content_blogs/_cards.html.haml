@@ -3,7 +3,7 @@
     .card{ class: card_classes(:attributes, local_assigns[:active]) }
       = link_to edit_content_blog_path(model), class: 'card__header' do
         %span.card__header-text= t('workarea.admin.content_blogs.cards.attributes.title')
-        = inline_svg 'workarea/admin/icons/attributes.svg', class: 'card__icon'
+        = inline_svg_tag 'workarea/admin/icons/attributes.svg', class: 'card__icon'
 
       - if local_assigns[:active].blank?
         .card__body
@@ -27,7 +27,7 @@
     .card{ class: card_classes(:blog_entries, local_assigns[:active]) }
       = link_to content_blog_blog_entries_path(content_blog_id: model.slug), class: 'card__header' do
         %span.card__header-text= t('workarea.admin.content_blogs.cards.blog_entries.title')
-        = inline_svg 'workarea/admin/blog/icons/blog_entry.svg', class: 'card__icon'
+        = inline_svg_tag 'workarea/admin/blog/icons/blog_entry.svg', class: 'card__icon'
 
       - if local_assigns[:active].blank?
         .card__body
