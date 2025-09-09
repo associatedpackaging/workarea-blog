@@ -18,9 +18,9 @@ module Workarea
 
       def taxon_icon(taxon, options = {})
         if taxon.resource_name.blog?
-          inline_svg('workarea/admin/blog/icons/blog.svg', options)
+          inline_svg_tag('workarea/admin/blog/icons/blog.svg', options)
         elsif taxon.resource_name.blog_entry?
-          inline_svg('workarea/admin/blog/icons/blog_entry.svg', options)
+          inline_svg_tag('workarea/admin/blog/icons/blog_entry.svg', options)
         else
           super
         end

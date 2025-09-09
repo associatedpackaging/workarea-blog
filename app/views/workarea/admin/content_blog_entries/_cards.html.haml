@@ -3,7 +3,7 @@
     .card{ class: card_classes(:attributes, local_assigns[:active]) }
       = link_to edit_content_blog_entry_path(model), class: 'card__header' do
         %span.card__header-text= t('workarea.admin.content_blog_entries.cards.attributes.title')
-        = inline_svg 'workarea/admin/icons/attributes.svg', class: 'card__icon'
+        = inline_svg_tag 'workarea/admin/icons/attributes.svg', class: 'card__icon'
 
       - if local_assigns[:active].blank?
         .card__body
@@ -36,7 +36,7 @@
     .card{ class: card_classes(:thumbnail_image, local_assigns[:active]) }
       = link_to thumbnail_image_content_blog_entry_path(model), class: 'card__header' do
         %span.card__header-text= t('workarea.admin.content_blog_entries.cards.thumbnail_image.title')
-        = inline_svg 'workarea/admin/icons/images.svg', class: 'card__icon'
+        = inline_svg_tag 'workarea/admin/icons/images.svg', class: 'card__icon'
 
       - if local_assigns[:active].blank?
         .card__body
@@ -58,7 +58,7 @@
     .card{ class: card_classes(:featured_products, local_assigns[:active]) }
       = link_to select_featured_product_path(model.to_global_id), class: 'card__header' do
         %span.card__header-text= t('workarea.admin.content_blog_entries.cards.featured_products.title')
-        = inline_svg 'workarea/admin/icons/featured_products.svg', class: 'card__icon'
+        = inline_svg_tag 'workarea/admin/icons/featured_products.svg', class: 'card__icon'
 
       - if local_assigns[:active].blank?
         .card__body
@@ -84,7 +84,7 @@
     .card{ class: card_classes(:user_comments, local_assigns[:active]) }
       = link_to content_blog_entry_comments_path(content_blog_entry_id: model.slug), class: 'card__header' do
         %span.card__header-text= t('workarea.admin.content_blog_entries.cards.comments.title')
-        = inline_svg 'workarea/admin/icons/comments.svg', class: 'card__icon'
+        = inline_svg_tag 'workarea/admin/icons/comments.svg', class: 'card__icon'
 
       - if local_assigns[:active].blank?
         .card__body

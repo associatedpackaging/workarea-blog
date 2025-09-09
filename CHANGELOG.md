@@ -1,3 +1,14 @@
+Workarea Blog 3.5.3 (2025-09-08)
+--------------------------------------------------------------------------------
+
+*   Use inline_svg_tag
+
+    The inline_svg method has been deprecated, so we need to use inline_svg_tag or
+    inline_svg_pack_tag, as appropriate, instead.
+
+    Matt Jordan
+
+
 Workarea Blog 3.5.2 (2020-11-12)
 --------------------------------------------------------------------------------
 
